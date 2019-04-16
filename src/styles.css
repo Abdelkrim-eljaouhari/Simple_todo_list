@@ -1,0 +1,119 @@
+/*--global css--*/
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab|ZCOOL+XiaoWei");
+@import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+  color: green;
+}
+.App,
+h1 {
+  font-family: "ZCOOL XiaoWei", serif;
+}
+
+.todo-list-wrapper {
+  max-width: 365px;
+  border: 1px solid #06060636;
+  margin: 20px auto 0px;
+  padding: 2px;
+  background-color: #1211ec42;
+  position: relative;
+}
+ul {
+  list-style-type: none;
+}
+.noTodo-p {
+  background-color: #0017ff1c;
+  padding: 20px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+ul li {
+  padding: 10px 0px;
+  background-color: #858abf7a;
+  box-sizing: content-box;
+  border-bottom: 1px solid #ffffff66;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 2.5fr 0.5fr;
+}
+input {
+  padding: 6px;
+  border: 1px solid #2a17de73;
+}
+button {
+  outline: none;
+  border: 2px solid #9c27b04a;
+  font-family: "ZCOOL XiaoWei", serif;
+}
+
+.linethrough {
+  transition: color 0.5s linear;
+  color: rgb(102, 61, 61);
+  text-decoration: line-through;
+}
+
+.input_checkbox:hover {
+  text-decoration: line-through;
+  color: red;
+}
+
+.todos__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todos__list p {
+  text-indent: 10px;
+}
+.todos__span {
+  margin: 0 10px;
+  cursor: pointer;
+}
+/*--Delete All button--*/
+.btn_delete {
+  position: absolute;
+  left: 0;
+  margin-left: -1px;
+  border-left-color: #1211ec42;
+  padding: 6px;
+  transition: all 0.3s linear;
+  opacity: 0;
+  cursor: pointer;
+  z-index: -10;
+}
+.btn_deleteAll {
+  margin-top: -20px;
+}
+.btn_deleteDown {
+  opacity: 1;
+  color: red;
+}
+/* /*--Icon button for sort up and down--*/
+.fa-sort-down,
+.fa-sort-up {
+  position: absolute;
+  bottom: -13px;
+  left: 0;
+  left: 20p;
+  margin-left: 70px;
+  font-size: 30px;
+  color: #acaefb;
+  cursor: pointer;
+}
+.fa-sort-down:hover,
+.fa-sort-up:hover {
+  color: green;
+}
+/*--override some css of fa-sort-up */
+.fa-sort-up {
+  bottom: -18px;
+}
